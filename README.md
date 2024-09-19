@@ -21,7 +21,7 @@ Its a Batch Launcher for QEmu binaries, to assist, installing and running, on Wi
 
     1. Run QEmu with Image (Automatic)
     2. Run QEmu with Image (Compatible)
-    3. Create 20GB Drive Image
+    3. Create Drive Image
     4. Configure Settings
     5. Run Diagnostic Commands
 
