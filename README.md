@@ -11,11 +11,27 @@ Its a Batch Launcher for QEmu binaries, to assist, installing and running, on Wi
     QEmu Batch Installer
 ========================================================================================================================
 
-    1. Run QEmu with Image (WHPX)
-    2. Run QEmu with Image (TCG)
+
+
+
+
+
+
+
+
+    1. Run QEmu with Image (Automatic)
+    2. Run QEmu with Image (Compatible)
     3. Create 20GB Drive Image
     4. Configure Settings
     5. Run Diagnostic Commands
+
+
+
+
+
+
+
+
 
 ========================================================================================================================
 Selection; Menu Option = 1-5, Exit Program = X:
