@@ -1,6 +1,3 @@
-:: QEmu Batch Installer
-
-:: DO NOT MOVE OR UPDATE THIS SECTION: START
 @echo off
 setlocal enabledelayedexpansion
 
@@ -76,23 +73,56 @@ echo ===========================================================================
 echo     QEmu Batch Installer
 echo ========================================================================================================================
 echo.
-echo     1. Run QEmu with Image (WHPX)
-echo     2. Run QEmu with Image (TCG)
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo     1. Run QEmu with Image (Automatic)
+echo     2. Run QEmu with Image (Compatible)
+
 echo     3. Create 20GB Drive Image
 echo     4. Configure Settings
 echo     5. Run Diagnostic Commands
 echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 echo ========================================================================================================================
 set /p choice=Selection; Menu Option = 1-5, Exit Program = X: 
-if "%choice%"=="1" set "accel_option=accel=whpx" & goto run_qemu_advanced
+if "%choice%"=="1" goto run_qemu_auto
 if "%choice%"=="2" set "accel_option=accel=tcg" & goto run_qemu_advanced
-if "%choice%"=="3" goto run_diagnostics
-if "%choice%"=="4" goto create_image
-if "%choice%"=="5" goto configure_settings
+if "%choice%"=="3" goto create_image
+if "%choice%"=="4" goto configure_settings
+if "%choice%"=="5" goto run_diagnostics
 if /i "%choice%"=="x" goto end_of_script
 echo Invalid choice. Please try again.
 timeout /t 2 >nul
 goto menu
+
+:run_qemu_auto
+echo Run QEmu with Auto Detection...
+timeout /t 1 >nul
+
+:: Check for Hyper-V or other hypervisor support
+systeminfo | findstr /C:"Hyper-V Requirements" | findstr /C:"Yes" >nul
+if %errorlevel% EQU 0 (
+    set "accel_option=accel=whpx"
+    echo Using WHPX hardware acceleration.
+) else (
+    set "accel_option=accel=tcg"
+    echo Using software emulation TCG.
+)
+timeout /t 2 >nul
+goto run_qemu_advanced
 
 :run_qemu_advanced
 echo Run QEmu...
