@@ -47,5 +47,6 @@ Selection; Menu Option = 1-5, Exit Program = X:
 4. I ran into the issue shown below, and my internet ran out...end of line.
 
 ### DEVELOPMENT:
-- Development Paused; I tried so very hard to get QEmu working, but I think my windows needs re-install, and when I do, I need ensure to install, Hypervisor AND WSL 2 (and install distro), and all other related setting up, before I de-brand/hack the OS. Asside from that, like it says in my Status. Here was my final work, but it doesnt have to be that way, please find the time to, Patreon or Kofi, a minimum of £15, and I can continue to have internet, yes it is that bad.
+- Am making an effort to get QEmu working, I think my windows needs re-install with early install of WSL2/Hypervisor (and install distros), and all other related setting up, before I de-brand/hack the OS to be anti-ms spyware/bloat. 
+- Recently have a, Patreon and Kofi, £15 will pay for internet for a month, so, yes you can make a difference to the project.
  
