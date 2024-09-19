@@ -1,3 +1,6 @@
+:: Script: `.\QEmu-Launcher.Bat`
+
+:: Initialization
 @echo off
 setlocal enabledelayedexpansion
 
@@ -83,8 +86,7 @@ echo.
 echo.
 echo     1. Run QEmu with Image (Automatic)
 echo     2. Run QEmu with Image (Compatible)
-
-echo     3. Create 20GB Drive Image
+echo     3. Create Drive Image
 echo     4. Configure Settings
 echo     5. Run Diagnostic Commands
 echo.
@@ -164,9 +166,10 @@ goto menu
 echo Create Disk Image...
 timeout /t 1 >nul
 set /p image_path=Enter full path for new disk image (e.g., E:\QEmuDisk\ubuntu_24_04_1.img): 
-echo Creating 20GB Drive Image...
+set /p image_size=Enter size of the disk image (e.g., 20G for 20GB): 
+echo Creating %image_size% Drive Image...
 @echo on
-.\qemu-img.exe create -f qcow2 %image_path% 20G
+.\qemu-img.exe create -f qcow2 %image_path% %image_size%
 .\qemu-img.exe info %image_path%
 @echo off
 echo %image_path%>>"%persistence_file%"
