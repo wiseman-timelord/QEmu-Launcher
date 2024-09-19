@@ -48,5 +48,5 @@ Selection; Menu Option = 1-5, Exit Program = X:
 
 ### DEVELOPMENT:
 - Am making an effort to get QEmu working, I think my windows needs re-install with early install of WSL2/Hypervisor (and install distros), and all other related setting up, before I de-brand/hack the OS to be anti-ms spyware/bloat. 
-- Recently have a, Patreon and Kofi, £15 will pay for internet for a month, so, yes you can make a difference to the project.
+- Recently have a, Patreon and Kofi, £15 will pay for internet for a month, so, yes you can make a difference to the project, with just a little donation.
  
